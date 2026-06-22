@@ -33,3 +33,28 @@ input {
   width: 100%;
   margin-bottom: 8px;
 }
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+.topbar {
+  background: #1a1a1a;
+  padding: 10px;
+}
+
+.workspace {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 🧾 THE "SHEET" */
+canvas {
+  background: #f2f2f2;
+  border: 2px solid #555;
+  box-shadow: 0 0 20px black;
+  cursor: crosshair;
+}
