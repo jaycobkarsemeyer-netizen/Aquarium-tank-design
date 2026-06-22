@@ -2,48 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Aquarium CAD V4</title>
+  <title>Aquarium CAD V5</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="topbar">
-  <h2>Aquarium CAD V4</h2>
+  <h2>Aquarium CAD V5 (Sketch Mode)</h2>
 
-  <div class="buttons">
-    <button onclick="setTool('select')">Select</button>
+  <div class="tools">
+    <button onclick="setTool('select')">Select/Move</button>
     <button onclick="setTool('rect')">Box</button>
     <button onclick="setTool('circle')">Circle</button>
     <button onclick="setTool('line')">Line</button>
 
-    <button onclick="deleteSelected()">Delete</button>
-    <button onclick="duplicate()">Duplicate</button>
+    <label>Stroke
+      <input id="stroke" type="number" value="2">
+    </label>
 
-    <button onclick="alignCenter()">Center</button>
-    <button onclick="alignLeft()">Left</button>
-    <button onclick="alignRight()">Right</button>
-    <button onclick="alignTop()">Top</button>
-    <button onclick="alignBottom()">Bottom</button>
-
-    <button onclick="exportSVG()">Export SVG</button>
-  </div>
-
-  <div class="settings">
-    <label>Stroke <input id="stroke" type="number" value="2"></label>
-    <label>Snap <input id="snap" type="number" value="10"></label>
+    <label>Snap
+      <input id="snap" type="number" value="10">
+    </label>
   </div>
 </div>
 
-<canvas id="canvas"></canvas>
-
-<div class="panel">
-  <h3>Properties</h3>
-
-  <label>X <input id="x"></label>
-  <label>Y <input id="y"></label>
-  <label>W <input id="w"></label>
-  <label>H <input id="h"></label>
-  <label>R <input id="r"></label>
+<div class="workspace">
+  <canvas id="canvas"></canvas>
 </div>
 
 <script src="app.js"></script>
